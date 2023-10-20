@@ -4,6 +4,8 @@ const answers = ["スーパーファミコン",
     "ニンテンドースイッチ",
     "ds",
 ];
+const correct = "ds";
+
 
 
 const $button = document.getElementsByTagName("button");
@@ -22,13 +24,16 @@ setupQuiz();
 
 
 //クリックされた正解を表示
-$button[0].addEventListener("click", () => {
-if (correct === $button[0].textContent) {
+$button[0].addEventListener("click", (e) => {
+    console.log(e);
+if (correct === e.target.textContent) {
 window.alert("正解！");    
 } else {
  window.alert("0不正解!") ;  
 }
 });
+
+
 $button[1].addEventListener("click", () => {
     if (correct === $button[1].textContent) {
     window.alert("正解！");    
