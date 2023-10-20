@@ -5,20 +5,20 @@ const answers = ["スーパーファミコン",
     "ds",
 ];
 
-let buttonindex = 0;
-let buttonLenguth = $button.buttonLenguth;
-while(buttonindex < buttonLenguth){
-    $button[buttonindex].textContent=answers[buttonindex]
-    buttonindex++;
-}
-
-
-const correct = "スーパーファミコン";
-console.log();
-document.getElementById("js-question").textContent= question;
 
 const $button = document.getElementsByTagName("button");
 
+const setupQuiz = () => {
+    document.getElementById("js-question").textContent= question;
+    let buttonindex = 0;
+    let buttonLenguth = $button.length;
+    while(buttonindex < buttonLenguth){
+        $button[buttonindex].textContent=answers[buttonindex];
+        buttonindex++;
+    }
+};
+
+setupQuiz();
 
 
 //クリックされた正解を表示
@@ -37,18 +37,18 @@ $button[1].addEventListener("click", () => {
     }
     });
 
-    $button[2].addEventListener("click", () => {
-        if (correct === $button[2].textContent) {
-        window.alert("正解！");    
-        } else {
-         window.alert("2不正解!") ;  
-        }
-        });
+$button[2].addEventListener("click", () => {
+    if (correct === $button[2].textContent) {
+    window.alert("正解！");    
+    } else {
+    window.alert("2不正解!") ;  
+    }
+    });
 
-        $button[3].addEventListener("click", () => {
-            if (correct === $button[3].textContent) {
-            window.alert("3正解！");    
-            } else {
-             window.alert("3不正解!") ;  
-            }
-            });
+$button[3].addEventListener("click", () => {
+    if (correct === $button[3].textContent) {
+    window.alert("3正解！");    
+    } else {
+    window.alert("3不正解!") ;  
+    }
+    });
