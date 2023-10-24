@@ -1,7 +1,0 @@
-htest.textの内容
-
-puth 
-exit
-:q
-n:
-fafafa
