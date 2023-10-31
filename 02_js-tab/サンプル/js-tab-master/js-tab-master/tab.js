@@ -14,8 +14,13 @@
   init();
 
   //クリックしたら起こるイベント
+  
+
   const handleClick = (e) => {
     e.preventDefault();
+console.log(e);
+console.log($nav);
+console.log($content);
 
     //クリックされたnavとそのdataを取得
     const $this = e.target;
@@ -37,7 +42,8 @@
   //全nav要素に対して関数を適応・発火
   let index = 0;
   while(index < navLen){
-    $nav[index].addEventListener('click', (e) => handleClick(e));  
+    $nav[index].addEventListener('click', (e) => {
+      handleClick(e)});  
     index++;
   }
 
