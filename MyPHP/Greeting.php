@@ -1,23 +1,40 @@
 <?php
-class Student{
+
+  class Student {
+
     public $name;
-    public function __construct($name){
-        $this ->name =$name;
-            }
-    function avg($math,$english){
-        echo(($math + $english)/2)."\n";
 
+    public function __construct($name) {
+      $this->name = $name;
     }
-}
 
+    function cal_avg($data) {
+      $sum = 0;
+      for($i = 0; $i < count($data); $i++) {
+        $sum += $data[$i];
+      }
+      $avg = $sum / count($data);
+      return $avg;
+    }
 
-$a001=new Student("1234");
-echo $a001 ->name."\n";
-$a001=new Student("sato");
-echo $a001 ->name."\n";
-$a002=new Student("tanaka");
-echo $a002 ->name."\n";
+    function judge($avg) {
+      $result;
+      if(60 <= $avg) {
+        $result = "passed";
+      } else {
+        $result = "failed";
+      }
+      return $result;
+    }
 
+  }
 
+  $a001 = new Student("hiroshi");
+  $data = [70, 65, 50, 10, 30];
+  $avg = $a001->cal_avg($data);
+  $result = $a001->judge($avg);    
 
-$a001->avg(80,70);
+  echo count($data)."\n";
+  echo $a001->name."\n";
+  echo $avg."\n";
+  echo $result."\n";
