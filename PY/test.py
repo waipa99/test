@@ -57,7 +57,7 @@
 # with open('C:/test/test-1/PY/unko.txt', 'r') as file:
 # 	print(file.read())
 
-#class
+# class
 # class Card:
 # 	def __init__(self, date, user_name):
 # 		self.date = date
@@ -71,18 +71,20 @@
 
 # date_b = '2020-01-03'
 # user_name_b = 'Kayoko'
-# card_b = Card(date_b, user_name_b)
+# card_b = Card(date_b,user_name_b)
 
+# print(card_a.user_name)
+# print (card_b,user_name_b)
 # print(card_b.message())
 
 #import
 # import math
 # print(math.pi)
 
-#import numpy
+import numpy
 
-#numpy_list = [3, 1, 5, 10, 2093, 304, 123]
-#print(numpy.sum(numpy_list))
+numpy_list = [3, 1, 5, 10, 2093, 304, 123]
+print(numpy.sum(numpy_list))
 
 
 
